@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: natours
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
   - port: 80
     targetPort: 8099
+    nodePort: 31091
   selector:
     app: natours
 ---
